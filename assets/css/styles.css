@@ -1,0 +1,24 @@
+.card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* color del navbar asimilando un color de clima */
+.bg-dark {
+    background-color: #4a90e2 !important; /* Azul cielo */
+
+}
+
+/* fondo de pantalla del clima */
+body {
+    background: url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
