@@ -9,7 +9,7 @@ Aplicación web responsiva que muestra información climática de 10 localidades
 - ✅ Navegación interactiva con JavaScript
 
 ## Tecnologías
-- HTML5 semántico
+- HTML5
 - Bootstrap 5.3
 - JavaScript Vanilla
 - CDN (jsDelivr)
@@ -26,5 +26,5 @@ Aplicación web responsiva que muestra información climática de 10 localidades
 
 ---
 
-**Desarrollado como proyecto educativo.**
+**Desarrollado como proyecto educativo / David Valdes.**
 
