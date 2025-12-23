@@ -25,8 +25,9 @@ body {
 
 .sekuya-regular {
   font-family: "Sekuya", system-ui;
-  font-weight: 400;
+  font-weight: 100;
   font-style: normal;
+  text-shadow: 0 10px 10px rgba(10, 16, 68, 0.8);
 }
 
 .weather-app__footer {
@@ -62,10 +63,6 @@ body {
 }
 .place-card__status {
   color: #6c757d;
-}
-
-#contenedor-cards {
-  background-color: rgba(248, 249, 250, 0.9) !important;
 }
 
 /*# sourceMappingURL=main.css.map */

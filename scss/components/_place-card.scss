@@ -1,10 +1,11 @@
-@import '../base/variables';
+@use '../base/variables' as *;
 
 // Mixin for card hover effect
 @mixin card-hover {
     transform: translateY(-5px);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
 }
+
 
 .place-card {
     transition: transform 0.2s ease-in-out;
@@ -37,10 +38,4 @@
     &__status {
         color: $secondary-color;
     }
-}
-
-// Styles for the cards container
-#contenedor-cards {
-    // Ensuring background helps readability against the main background image
-    background-color: rgba(248, 249, 250, 0.9) !important; // bg-light with opacity
 }

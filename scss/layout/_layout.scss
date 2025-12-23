@@ -1,4 +1,4 @@
-@import '../base/variables';
+@use '../base/variables' as *;
 
 body {
     background: url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg') no-repeat center center fixed;
