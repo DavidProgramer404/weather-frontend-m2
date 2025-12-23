@@ -1,0 +1,15 @@
+@import '../base/variables';
+
+.weather-app {
+    &__footer {
+        margin-top: 3rem;
+
+        .bg-dark {
+            background-color: #212529 !important; // Bootstrap dark
+
+            @media (min-width: $breakpoint-desktop) {
+                // Example of simple media query usage, though strictly following bootstrap utility classes is also fine
+            }
+        }
+    }
+}

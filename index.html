@@ -15,7 +15,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,10 +24,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="weather-app">
     <!-- Header -->
 
-    <header>
+    <header class="weather-app__header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand sekuya-regular" href="index.html"> ⛅ App Clima</a>
@@ -37,10 +38,12 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link active text-white text-decoration-none sekuya-regular">Home</a>
+                            <a href="index.html"
+                                class="nav-link active text-white text-decoration-none sekuya-regular">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="about.html" class="nav-link text-white text-decoration-none sekuya-regular">Acerca de</a>
+                            <a href="about.html" class="nav-link text-white text-decoration-none sekuya-regular">Acerca
+                                de</a>
                         </li>
                     </ul>
                 </div>
@@ -49,8 +52,8 @@
     </header>
 
     <!-- Main -->
-    <main class="container py-5">
-        <h1 class="text-center mb-5 display-4 text-dark fw-normal"> ⛅ App Clima 🌧️</h1>
+    <main class="weather-app__main container py-5">
+        <h1 class="weather-app__content-title text-center mb-5 display-4 fw-normal"> ⛅ App Clima 🌧️</h1>
 
         <section id="contenedor-cards"
             class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-4 gy-4 p-4 border rounded-3 bg-light shadow-lg pb-5">
@@ -60,7 +63,7 @@
     </main>
 
     <!-- footer -->
-    <footer>
+    <footer class="weather-app__footer">
         <div class="bg-dark text-white text-center py-3 mt-5">
             <p class="mb-0">© 2025 App Clima. Todos los derechos reservados | Desarrollado con HTML5 y Bootstrap.</p>
         </div>

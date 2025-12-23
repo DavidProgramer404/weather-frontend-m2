@@ -207,14 +207,15 @@ function renderizarHome() {
     
     datosClimaChile.forEach((localidad) => {
         const card = document.createElement('div');
-        card.className = 'card h-100 cursor-pointer';
-        card.style.cursor = 'pointer';
+        // Usamos clases de Bootstrap y nuestra clase BEM "place-card"
+        card.className = 'place-card card h-100'; 
+        // card.style.cursor = 'pointer'; // Ya manejado en CSS
         card.innerHTML = `
             <div class="card-body text-center">
-                <h3 class="card-title">${localidad.nombre}</h3>
-                <p class="display-6">${localidad.icono}</p>
-                <p class="card-text"><strong>${localidad.temperatura}°C</strong></p>
-                <p class="card-text text-secondary">${localidad.estado}</p>
+                <h3 class="card-title place-card__title">${localidad.nombre}</h3>
+                <p class="display-6 place-card__icon">${localidad.icono}</p>
+                <p class="card-text place-card__temp">${localidad.temperatura}°C</p>
+                <p class="card-text text-secondary place-card__status">${localidad.estado}</p>
             </div>
         `;
         card.addEventListener('click', () => {

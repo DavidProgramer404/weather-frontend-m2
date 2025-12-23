@@ -1,0 +1,71 @@
+.weather-app__header .navbar {
+  background-color: #4a90e2 !important;
+}
+.weather-app__header .navbar-brand {
+  font-family: "Sekuya", system-ui;
+}
+.weather-app__header .nav-link {
+  font-family: "Sekuya", system-ui;
+}
+
+body {
+  background: url("https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.weather-app__main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.weather-app__content-title {
+  color: #212529 !important;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.sekuya-regular {
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.weather-app__footer {
+  margin-top: 3rem;
+}
+.weather-app__footer .bg-dark {
+  background-color: #212529 !important;
+}
+.place-card {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+.place-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.place-card__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.place-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.place-card__temp {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a90e2;
+}
+.place-card__status {
+  color: #6c757d;
+}
+
+#contenedor-cards {
+  background-color: rgba(248, 249, 250, 0.9) !important;
+}
+
+/*# sourceMappingURL=main.css.map */

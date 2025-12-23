@@ -1,0 +1,17 @@
+@import '../base/variables';
+
+.weather-app {
+    &__header {
+        .navbar {
+            background-color: $primary-color !important;
+        }
+
+        .navbar-brand {
+            font-family: $font-brand;
+        }
+
+        .nav-link {
+            font-family: $font-brand;
+        }
+    }
+}

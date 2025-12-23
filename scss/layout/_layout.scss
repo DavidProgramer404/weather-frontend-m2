@@ -1,0 +1,28 @@
+@import '../base/variables';
+
+body {
+    background: url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: $font-stack;
+}
+
+.weather-app {
+    &__main {
+        // Main content styles
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    &__content-title {
+        color: #212529 !important; // Bootstrap dark text
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8); // Improve readability on background
+    }
+}
+
+// Sekuya Font Class
+.sekuya-regular {
+    font-family: $font-brand;
+    font-weight: 100;
+    font-style: normal;
+    text-shadow: 0 10px 10px rgba(10, 16, 68, 0.8);
+}
