@@ -1,187 +1,188 @@
-// Datos clima de chile
-
-const datosClimaChile = [
-    { 
-        id: 'chile', 
-        nombre : 'Chile', 
-        temperatura: 15, 
-        estado: 'nublado', 
+// Datos de clima (Modelo de datos)
+const lugares = [
+    {
+        id: 'chile',
+        nombre: 'Chile',
+        tempActual: 15,
+        estadoActual: 'Nublado',
         icono: '☁️',
-        humedad: 78, 
-        viento: 10, 
-        pronostico: [
-            { dia: 'Lunes', temperatura: 16, estado: 'soleado', icono: '☀️' },
-            { dia: 'Martes', temperatura: 14, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Miércoles', temperatura: 15, estado: 'nublado', icono: '☁️' },
-            { dia: 'Jueves', temperatura: 17, estado: 'soleado', icono: '☀️' },
-            { dia: 'Viernes', temperatura: 13, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Sábado', temperatura: 16, estado: 'nublado', icono: '☁️' },
-            { dia: 'Domingo', temperatura: 15, estado: 'soleado', icono: '☀️' }
+        humedad: 78,
+        viento: 10,
+        pronosticoSemanal: [
+            { dia: 'Lunes', min: 10, max: 18, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Martes', min: 9, max: 16, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Miércoles', min: 11, max: 17, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Jueves', min: 12, max: 19, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Viernes', min: 8, max: 15, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Sábado', min: 10, max: 18, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Domingo', min: 11, max: 17, estado: 'Soleado', icono: '☀️' }
         ]
     },
     {
-        id: 'santiago', 
-        nombre : 'Santiago', 
-        temperatura: 18, 
-        estado: 'soleado', 
+        id: 'santiago',
+        nombre: 'Santiago',
+        tempActual: 18,
+        estadoActual: 'Soleado',
         icono: '☀️',
-        humedad: 65, 
-        viento: 12, 
-        pronostico: [
-            { dia: 'Lunes', temperatura: 19, estado: 'soleado', icono: '☀️' },
-            { dia: 'Martes', temperatura: 17, estado: 'nublado', icono: '☁️' },
-            { dia: 'Miércoles', temperatura: 18, estado: 'soleado', icono: '☀️' },
-            { dia: 'Jueves', temperatura: 20, estado: 'soleado', icono: '☀️' },
-            { dia: 'Viernes', temperatura: 16, estado: 'nublado', icono: '☁️' },
-            { dia: 'Sábado', temperatura: 19, estado: 'soleado', icono: '☀️' },
-            { dia: 'Domingo', temperatura: 18, estado: 'nublado', icono: '☁️' }
+        humedad: 65,
+        viento: 12,
+        pronosticoSemanal: [
+            { dia: 'Lunes', min: 12, max: 25, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Martes', min: 11, max: 23, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Miércoles', min: 13, max: 26, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Jueves', min: 14, max: 28, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Viernes', min: 10, max: 22, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Sábado', min: 12, max: 24, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Domingo', min: 13, max: 25, estado: 'Nublado', icono: '☁️' }
         ]
     },
     {
-        id: 'valparaiso', 
-        nombre : 'Valparaíso', 
-        temperatura: 14, 
-        estado: 'lluvioso', 
+        id: 'valparaiso',
+        nombre: 'Valparaíso',
+        tempActual: 14,
+        estadoActual: 'Lluvioso',
         icono: '🌧️',
-        humedad: 80, 
-        viento: 15, 
-        pronostico: [
-            { dia: 'Lunes', temperatura: 15, estado: 'nublado', icono: '☁️' },
-            { dia: 'Martes', temperatura: 13, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Miércoles', temperatura: 14, estado: 'nublado', icono: '☁️' },
-            { dia: 'Jueves', temperatura: 16, estado: 'soleado', icono: '☀️' },
-            { dia: 'Viernes', temperatura: 12, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Sábado', temperatura: 15, estado: 'nublado', icono: '☁️' },
-            { dia: 'Domingo', temperatura: 14, estado: 'soleado', icono: '☀️' }
+        humedad: 80,
+        viento: 15,
+        pronosticoSemanal: [
+            { dia: 'Lunes', min: 10, max: 16, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Martes', min: 9, max: 14, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Miércoles', min: 11, max: 15, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Jueves', min: 10, max: 18, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Viernes', min: 8, max: 13, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Sábado', min: 10, max: 17, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Domingo', min: 11, max: 16, estado: 'Soleado', icono: '☀️' }
         ]
     },
     {
-        id: 'antofagasta', 
-        nombre : 'Antofagasta', 
-        temperatura: 20,
-        estado: 'soleado', 
+        id: 'antofagasta',
+        nombre: 'Antofagasta',
+        tempActual: 20,
+        estadoActual: 'Soleado',
         icono: '☀️',
-        humedad: 60, 
-        viento: 8, 
-        pronostico: [
-            { dia: 'Lunes', temperatura: 21, estado: 'soleado', icono: '☀️' },
-            { dia: 'Martes', temperatura: 19, estado: 'nublado', icono: '☁️' },
-            { dia: 'Miércoles', temperatura: 20, estado: 'soleado', icono: '☀️' },
-            { dia: 'Jueves', temperatura: 22, estado: 'soleado', icono: '☀️' },
-            { dia: 'Viernes', temperatura: 18, estado: 'nublado', icono: '☁️' },
-            { dia: 'Sábado', temperatura: 21, estado: 'soleado', icono: '☀️' },
-            { dia: 'Domingo', temperatura: 20, estado: 'nublado', icono: '☁️' }
+        humedad: 60,
+        viento: 8,
+        pronosticoSemanal: [
+            { dia: 'Lunes', min: 15, max: 22, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Martes', min: 14, max: 21, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Miércoles', min: 16, max: 23, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Jueves', min: 15, max: 24, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Viernes', min: 14, max: 20, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Sábado', min: 15, max: 22, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Domingo', min: 16, max: 21, estado: 'Nublado', icono: '☁️' }
         ]
     },
     {
         id: 'puerto-varas',
         nombre: 'Puerto Varas',
-        temperatura: 12,
-        estado: 'nublado',
+        tempActual: 12,
+        estadoActual: 'Nublado',
         icono: '☁️',
         humedad: 85,
         viento: 18,
-        pronostico: [
-            { dia: 'Lunes', temperatura: 13, estado: 'nublado', icono: '☁️' },
-            { dia: 'Martes', temperatura: 11, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Miércoles', temperatura: 12, estado: 'nublado', icono: '☁️' },
-            { dia: 'Jueves', temperatura: 14, estado: 'soleado', icono: '☀️' },
-            { dia: 'Viernes', temperatura: 10, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Sábado', temperatura: 13, estado: 'nublado', icono: '☁️' },
-            { dia: 'Domingo', temperatura: 12, estado: 'soleado', icono: '☀️' }
+        pronosticoSemanal: [
+            { dia: 'Lunes', min: 6, max: 14, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Martes', min: 5, max: 12, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Miércoles', min: 7, max: 13, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Jueves', min: 8, max: 15, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Viernes', min: 4, max: 11, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Sábado', min: 6, max: 14, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Domingo', min: 7, max: 13, estado: 'Soleado', icono: '☀️' }
         ]
     },
     {
         id: 'punta-arenas',
         nombre: 'Punta Arenas',
-        temperatura: 8,
-        estado: 'ventoso',
+        tempActual: 8,
+        estadoActual: 'Ventoso',
         icono: '💨',
         humedad: 75,
         viento: 25,
-        pronostico: [
-            { dia: 'Lunes', temperatura: 9, estado: 'ventoso', icono: '💨' },
-            { dia: 'Martes', temperatura: 7, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Miércoles', temperatura: 8, estado: 'ventoso', icono: '💨' },
-            { dia: 'Jueves', temperatura: 10, estado: 'nublado', icono: '☁️' },
-            { dia: 'Viernes', temperatura: 6, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Sábado', temperatura: 9, estado: 'ventoso', icono: '💨' },
-            { dia: 'Domingo', temperatura: 8, estado: 'nublado', icono: '☁️' }
+        pronosticoSemanal: [
+            { dia: 'Lunes', min: 2, max: 10, estado: 'Ventoso', icono: '💨' },
+            { dia: 'Martes', min: 1, max: 8, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Miércoles', min: 3, max: 9, estado: 'Ventoso', icono: '💨' },
+            { dia: 'Jueves', min: 4, max: 11, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Viernes', min: 0, max: 7, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Sábado', min: 2, max: 10, estado: 'Ventoso', icono: '💨' },
+            { dia: 'Domingo', min: 3, max: 9, estado: 'Nublado', icono: '☁️' }
         ]
     },
     {
         id: 'atacama',
         nombre: 'Atacama',
-        temperatura: 25,
-        estado: 'soleado',
+        tempActual: 25,
+        estadoActual: 'Soleado',
         icono: '☀️',
         humedad: 40,
         viento: 5,
-        pronostico: [
-            { dia: 'Lunes', temperatura: 26, estado: 'soleado', icono: '☀️' },
-            { dia: 'Martes', temperatura: 24, estado: 'soleado', icono: '☀️' },
-            { dia: 'Miércoles', temperatura: 25, estado: 'soleado', icono: '☀️' },
-            { dia: 'Jueves', temperatura: 27, estado: 'soleado', icono: '☀️' },
-            { dia: 'Viernes', temperatura: 23, estado: 'nublado', icono: '☁️' },
-            { dia: 'Sábado', temperatura: 26, estado: 'soleado', icono: '☀️' },
-            { dia: 'Domingo', temperatura: 25, estado: 'soleado', icono: '☀️' }
+        pronosticoSemanal: [
+            { dia: 'Lunes', min: 15, max: 30, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Martes', min: 16, max: 29, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Miércoles', min: 17, max: 31, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Jueves', min: 18, max: 32, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Viernes', min: 15, max: 28, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Sábado', min: 16, max: 30, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Domingo', min: 17, max: 29, estado: 'Soleado', icono: '☀️' }
         ]
     },
     {
         id: 'concepcion',
         nombre: 'Concepción',
-        temperatura: 16,
-        estado: 'nublado',
+        tempActual: 16,
+        estadoActual: 'Nublado',
         icono: '☁️',
         humedad: 72,
         viento: 14,
-        pronostico: [
-            { dia: 'Lunes', temperatura: 17, estado: 'nublado', icono: '☁️' },
-            { dia: 'Martes', temperatura: 15, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Miércoles', temperatura: 16, estado: 'nublado', icono: '☁️' },
-            { dia: 'Jueves', temperatura: 18, estado: 'soleado', icono: '☀️' },
-            { dia: 'Viernes', temperatura: 14, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Sábado', temperatura: 17, estado: 'nublado', icono: '☁️' },
-            { dia: 'Domingo', temperatura: 16, estado: 'soleado', icono: '☀️' }
+        pronosticoSemanal: [
+            { dia: 'Lunes', min: 8, max: 18, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Martes', min: 9, max: 16, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Miércoles', min: 10, max: 17, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Jueves', min: 11, max: 19, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Viernes', min: 8, max: 15, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Sábado', min: 10, max: 18, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Domingo', min: 11, max: 17, estado: 'Soleado', icono: '☀️' }
         ]
     },
     {
         id: 'ovalle',
         nombre: 'Ovalle',
-        temperatura: 22,
-        estado: 'soleado',
+        tempActual: 22,
+        estadoActual: 'Soleado',
         icono: '☀️',
         humedad: 55,
         viento: 9,
-        pronostico: [
-            { dia: 'Lunes', temperatura: 23, estado: 'soleado', icono: '☀️' },
-            { dia: 'Martes', temperatura: 21, estado: 'nublado', icono: '☁️' },
-            { dia: 'Miércoles', temperatura: 22, estado: 'soleado', icono: '☀️' },
-            { dia: 'Jueves', temperatura: 24, estado: 'soleado', icono: '☀️' },
-            { dia: 'Viernes', temperatura: 20, estado: 'nublado', icono: '☁️' },
-            { dia: 'Sábado', temperatura: 23, estado: 'soleado', icono: '☀️' },
-            { dia: 'Domingo', temperatura: 22, estado: 'nublado', icono: '☁️' }
+        pronosticoSemanal: [
+            { dia: 'Lunes', min: 12, max: 26, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Martes', min: 11, max: 24, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Miércoles', min: 13, max: 25, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Jueves', min: 14, max: 27, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Viernes', min: 11, max: 23, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Sábado', min: 13, max: 26, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Domingo', min: 12, max: 25, estado: 'Nublado', icono: '☁️' }
         ]
     },
     {
         id: 'temuco',
         nombre: 'Temuco',
-        temperatura: 13,
-        estado: 'lluvioso',
+        tempActual: 13,
+        estadoActual: 'Lluvioso',
         icono: '🌧️',
         humedad: 82,
         viento: 16,
-        pronostico: [
-            { dia: 'Lunes', temperatura: 14, estado: 'nublado', icono: '☁️' },
-            { dia: 'Martes', temperatura: 12, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Miércoles', temperatura: 13, estado: 'nublado', icono: '☁️' },
-            { dia: 'Jueves', temperatura: 15, estado: 'soleado', icono: '☀️' },
-            { dia: 'Viernes', temperatura: 11, estado: 'lluvioso', icono: '🌧️' },
-            { dia: 'Sábado', temperatura: 14, estado: 'nublado', icono: '☁️' },
-            { dia: 'Domingo', temperatura: 13, estado: 'soleado', icono: '☀️' }
+        pronosticoSemanal: [
+            { dia: 'Lunes', min: 5, max: 15, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Martes', min: 4, max: 13, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Miércoles', min: 6, max: 14, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Jueves', min: 7, max: 16, estado: 'Soleado', icono: '☀️' },
+            { dia: 'Viernes', min: 3, max: 12, estado: 'Lluvioso', icono: '🌧️' },
+            { dia: 'Sábado', min: 5, max: 15, estado: 'Nublado', icono: '☁️' },
+            { dia: 'Domingo', min: 6, max: 14, estado: 'Soleado', icono: '☀️' }
         ]
     }
 ];
+
+// --- Lógica de Negocio ---
 
 /**
  * Obtiene los parámetros de la URL
@@ -195,8 +196,66 @@ function obtenerParametroURL(param) {
  * Busca una localidad por ID
  */
 function buscarLocalidad(id) {
-    return datosClimaChile.find(localidad => localidad.id === id);
+    return lugares.find(lugar => lugar.id === id);
 }
+
+/**
+ * Calcula estadísticas semanales a partir del pronóstico
+ */
+function calcularEstadisticas(pronostico) {
+    let minSemanal = Infinity;
+    let maxSemanal = -Infinity;
+    let sumaTempPromedio = 0;
+
+    // Contadores para tipos de clima
+    let diasSoleados = 0;
+    let diasNublados = 0;
+    let diasLluviosos = 0;
+    let diasVentosos = 0;
+
+    pronostico.forEach(dia => {
+        // Mínimo y Máximo absoluto de la semana
+        if (dia.min < minSemanal) minSemanal = dia.min;
+        if (dia.max > maxSemanal) maxSemanal = dia.max;
+
+        // Para el promedio usamos el promedio del día (min+max)/2
+        const promedioDia = (dia.min + dia.max) / 2;
+        sumaTempPromedio += promedioDia;
+
+        // Conteo de estados
+        const estadoLower = dia.estado.toLowerCase();
+        if (estadoLower.includes('soleado')) diasSoleados++;
+        else if (estadoLower.includes('nublado')) diasNublados++;
+        else if (estadoLower.includes('lluvioso')) diasLluviosos++;
+        else if (estadoLower.includes('ventoso') || estadoLower.includes('viento')) diasVentosos++;
+    });
+
+    const promedioSemanal = (sumaTempPromedio / pronostico.length).toFixed(1);
+
+    // Generar resumen textual
+    let resumen = "Semana variable.";
+    if (diasSoleados >= 4) {
+        resumen = "Semana mayormente soleada ☀️. ¡Ideal para salir!";
+    } else if (diasLluviosos >= 3) {
+        resumen = "Semana con varias lluvias 🌧️. No olvides tu paraguas.";
+    } else if (diasNublados >= 4) {
+        resumen = "Semana mayormente nublada ☁️.";
+    } else if (diasVentosos >= 3) {
+        resumen = "Semana con vientos fuertes 💨.";
+    }
+
+    return {
+        min: minSemanal,
+        max: maxSemanal,
+        promedio: promedioSemanal,
+        diasSoleados,
+        diasNublados,
+        diasLluviosos,
+        resumen
+    };
+}
+
+// --- Lógica de Presentación (DOM) ---
 
 /**
  * Función que renderiza las cards en el Home
@@ -204,22 +263,23 @@ function buscarLocalidad(id) {
 function renderizarHome() {
     const contenedor = document.getElementById('contenedor-cards');
     if (!contenedor) return;
-    
-    datosClimaChile.forEach((localidad) => {
+
+    // Limpiamos contenido previo por si acaso
+    contenedor.innerHTML = '';
+
+    lugares.forEach((lugar) => {
         const card = document.createElement('div');
-        // Usamos clases de Bootstrap y nuestra clase BEM "place-card"
-        card.className = 'place-card card h-100'; 
-        // card.style.cursor = 'pointer'; // Ya manejado en CSS
+        card.className = 'place-card card h-100';
         card.innerHTML = `
             <div class="card-body text-center">
-                <h3 class="card-title place-card__title">${localidad.nombre}</h3>
-                <p class="display-6 place-card__icon">${localidad.icono}</p>
-                <p class="card-text place-card__temp">${localidad.temperatura}°C</p>
-                <p class="card-text text-secondary place-card__status">${localidad.estado}</p>
+                <h3 class="card-title place-card__title">${lugar.nombre}</h3>
+                <p class="display-6 place-card__icon">${lugar.icono}</p>
+                <p class="card-text place-card__temp">${lugar.tempActual}°C</p>
+                <p class="card-text text-secondary place-card__status">${lugar.estadoActual}</p>
             </div>
         `;
         card.addEventListener('click', () => {
-            window.location.href = `detalles.html?id=${localidad.id}`;
+            window.location.href = `detalles.html?id=${lugar.id}`;
         });
         contenedor.appendChild(card);
     });
@@ -230,35 +290,79 @@ function renderizarHome() {
  */
 function renderizarDetalles() {
     const id = obtenerParametroURL('id');
-    const localidad = buscarLocalidad(id);
-    
-    if (!localidad) {
-        window.location.href = 'index.html';
+    const lugar = buscarLocalidad(id);
+
+    if (!lugar) {
+        // Si no hay ID o no existe, volver al home (o mostrar error)
+        // window.location.href = 'index.html';
+        console.error("Lugar no encontrado");
         return;
     }
-    
+
     // Renderizar detalles principales
-    document.getElementById('detalle-nombre').textContent = localidad.nombre;
-    document.getElementById('detalle-temp').textContent = `${localidad.temperatura}°C ${localidad.icono}`;
-    document.getElementById('detalle-estado').textContent = localidad.estado;
-    document.getElementById('detalle-humedad').textContent = `${localidad.humedad}%`;
-    document.getElementById('detalle-viento').textContent = `${localidad.viento} km/h`;
-    
-    // Renderizar pronóstico semanal
-    const contenedor = document.getElementById('pronostico-semanal');
-    localidad.pronostico.forEach((dia) => {
-        const card = document.createElement('div');
-        card.className = 'col';
-        card.innerHTML = `
-            <div class="card h-100 text-center">
+    document.getElementById('detalle-nombre').textContent = lugar.nombre;
+    document.getElementById('detalle-temp').textContent = `${lugar.tempActual}°C ${lugar.icono}`;
+    document.getElementById('detalle-estado').textContent = lugar.estadoActual;
+    document.getElementById('detalle-humedad').textContent = `${lugar.humedad}%`;
+    document.getElementById('detalle-viento').textContent = `${lugar.viento} km/h`;
+
+    // Calcular estadísticas
+    const stats = calcularEstadisticas(lugar.pronosticoSemanal);
+
+    // Renderizar sección de estadísticas si existe el contenedor (lo crearemos en el HTML)
+    const contenedorStats = document.getElementById('contenedor-estadisticas');
+    if (contenedorStats) {
+        contenedorStats.innerHTML = `
+            <div class="card bg-light border-info mb-4">
+                <div class="card-header bg-info text-white fw-bold">Estadísticas de la Semana 📊</div>
                 <div class="card-body">
-                    <h5 class="card-title">${dia.dia}</h5>
-                    <p class="display-5">${dia.icono}</p>
-                    <p class="card-text"><strong>${dia.temperatura}°C</strong></p>
-                    <p class="card-text text-secondary">${dia.estado}</p>
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <h6 class="text-primary">Mínima</h6>
+                            <p class="fs-4 fw-bold text-primary">${stats.min}°C</p>
+                        </div>
+                        <div class="col-4 border-start border-end">
+                            <h6 class="text-success">Promedio</h6>
+                            <p class="fs-4 fw-bold text-success">${stats.promedio}°C</p>
+                        </div>
+                        <div class="col-4">
+                            <h6 class="text-danger">Máxima</h6>
+                            <p class="fs-4 fw-bold text-danger">${stats.max}°C</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-center mb-2">
+                        <span class="badge bg-warning text-dark me-2">☀️ ${stats.diasSoleados} Soleados</span>
+                        <span class="badge bg-secondary me-2">☁️ ${stats.diasNublados} Nublados</span>
+                        <span class="badge bg-primary me-2">🌧️ ${stats.diasLluviosos} Lluviosos</span>
+                    </div>
+                    <p class="text-center fst-italic mt-3 mb-0">"${stats.resumen}"</p>
                 </div>
             </div>
         `;
-        contenedor.appendChild(card);
-    });
+    }
+
+    // Renderizar pronóstico semanal
+    const contenedorPronostico = document.getElementById('pronostico-semanal');
+    if (contenedorPronostico) {
+        contenedorPronostico.innerHTML = ''; // Limpiar
+        lugar.pronosticoSemanal.forEach((dia) => {
+            const card = document.createElement('div');
+            card.className = 'col';
+            card.innerHTML = `
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body p-2">
+                        <h6 class="card-title text-muted mb-2">${dia.dia}</h6>
+                        <p class="display-6 mb-1">${dia.icono}</p>
+                        <div class="d-flex justify-content-between px-3 mt-2">
+                           <span class="text-primary fw-bold">${dia.min}°</span>
+                           <span class="text-danger fw-bold">${dia.max}°</span>
+                        </div>
+                        <p class="card-text small text-secondary mt-2">${dia.estado}</p>
+                    </div>
+                </div>
+            `;
+            contenedorPronostico.appendChild(card);
+        });
+    }
 }

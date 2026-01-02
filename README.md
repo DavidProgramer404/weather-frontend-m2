@@ -1,36 +1,37 @@
-# App Clima 🌦️ - Módulo 3
+# App Clima 🌦️ - Módulo 4 (Lógica y Estadísticas en JavaScript)
 
-Esta es la evolución de la aplicación de clima desarrollada en el Módulo 2. Se ha realizado un refactoring completo de la capa de estilos para aplicar metodologías profesionales y herramientas modernas.
+Esta es la evolución de la aplicación de clima, enfocada ahora en la **lógica de programación y manejo de datos**. Se ha implementado un modelo de datos robusto en JavaScript para gestionar pronósticos y calcular estadísticas dinámicas.
 
 [ENLACE_GITHUB] [https://github.com/DavidProgramer404/weather-frontend-m2.git]
 
 ## 1) Propósito
-Refactorizar la interfaz aplicando metodologías de organización de estilos, preprocesamiento con SASS y el modelo de cajas para construir un layout más claro, mantenible y responsivo.
+Reforzar los fundamentos de programación en JavaScript implementando la lógica interna de la App: modelar datos, recorrer estructuras con ciclos, aplicar condicionales y manipular el DOM para mostrar información dinámica.
 
-## 2) Metodología de Estilos
-Se ha implementado la metodología **BEM (Block Element Modifier)** para organizar las clases CSS, asegurando un código modular.
-Ejemplos de clases utilizadas:
-- `.weather-app__header`
-- `.place-card__title`
-- `.place-card__temp`
+## 2) Modelado de Datos
+Los datos ya no están estáticos en el HTML. Se gestionan en un archivo JavaScript (`script.js`) utilizando:
+- **Arreglo de Lugares**: Una colección de objetos donde cada lugar tiene propiedades como `id`, `nombre`, `tempActual`, etc.
+- **Pronóstico Semanal**: Un arreglo anidado de objetos con información diaria (`dia`, `min`, `max`, `estado`), permitiendo cálculos precisos.
 
-## 3) Estructura SASS
-El proyecto utiliza SASS para modularizar los estilos:
-- `/scss/base`: Variables globales (`_variables.scss`).
-- `/scss/layout`: Estilos para estructuras principales (`_header.scss`, `_footer.scss`, `_layout.scss`).
-- `/scss/components`: Estilos para componentes (`_place-card.scss`).
-- `main.scss`: Archivo principal que importa todos los parciales.
+## 3) Funcionalidades y Estadísticas
+La aplicación ahora calcula automáticamente en la vista de detalles:
+- **Temperaturas Extremas**: Mínima y máxima de toda la semana.
+- **Promedio Semanal**: Temperatura media calculada a partir de los datos diarios.
+- **Conteo de Climas**: Cantidad de días soleados, nublados, lluviosos, etc.
+- **Resumen Inteligente**: Un mensaje de texto generado dinámicamente según el clima predominante de la semana (ej. "Semana mayormente soleada").
 
 ## 4) Tecnologías
-- HTML5
-- SASS (SCSS)
-- Bootstrap 5 (vía CDN)
-- JavaScript 
+- HTML5 & CSS3 (SASS + BEM)
+- Bootstrap 5
+- **JavaScript (ES6+)**:
+  - Manipulación del DOM.
+  - Funciones de orden superior (`forEach`, `find`).
+  - Lógica de control y ciclos.
 
-## 5) Páginas
-- `index.html`: Home con listado de localidades en grid responsivo.
-- `detalles.html`: Detalle y pronóstico semanal.
-- `about.html`: Información del proyecto.
+## 5) Estructura del Proyecto
+- `index.html`: Home dinámica que renderiza las cards desde JS.
+- `detalles.html`: Vista de detalle que calcula y muestra estadísticas y pronósticos.
+- `assets/js/script.js`: Contiene el modelo de datos y toda la lógica de la aplicación.
+- `assets/css/main.css`: Estilos compilados.
 
 ---
 **Desarrollado como proyecto educativo / David Valdes.**
