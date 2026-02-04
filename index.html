@@ -27,24 +27,38 @@
     <!-- Header -->
 
     <header class="weather-app__header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-lg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-bottom: 3px solid #FFD700;">
             <div class="container">
-                <a class="navbar-brand sekuya-regular" href="index.html"> ⛅ App Clima</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html" style="font-size: 1.5rem;">
+                    <span class="me-2" style="font-size: 2rem;">🌤️</span>
+                    <span class="sekuya-regular">App - Clima</span>
+                    <span class="ms-2 badge bg-warning text-dark">v2.0</span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    style="background: rgba(255, 255, 255, 0.1);">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="index.html"
-                                class="nav-link active text-white text-decoration-none sekuya-regular">Home</a>
+                            <a href="index.html" class="nav-link px-3 py-2 mx-1 rounded-pill active"
+                               style="background: rgba(255, 255, 255, 0.1); transition: all 0.3s ease;">
+                                <i class="me-1">🏠</i>Home
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="about.html" class="nav-link text-white text-decoration-none sekuya-regular">Acerca
-                                de</a>
+                            <a href="about.html" class="nav-link px-3 py-2 mx-1 rounded-pill"
+                               style="transition: all 0.3s ease;">
+                                <i class="me-1">ℹ️</i>Acerca de
+                            </a>
                         </li>
                     </ul>
+                    <div class="d-flex align-items-center ms-3">
+                        <small class="text-light opacity-75">
+                            <i class="me-1">📅</i>Actualizado: <span id="current-date"></span>
+                        </small>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -52,7 +66,7 @@
 
     <!-- Main -->
     <main class="weather-app__main container py-5">
-        <h1 class="weather-app__content-title text-center mb-5 display-4 fw-normal"> ⛅ App Clima 🌧️</h1>
+        <h1 class="weather-app__content-title text-center mb-5 display-4 fw-normal txtAppClima"> ⛅ App Clima 🌧️</h1>
 
         <section id="contenedor-cards"
             class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gx-4 gy-4 p-4 border rounded-3 bg-light shadow-lg pb-5">

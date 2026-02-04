@@ -65,4 +65,64 @@ body {
   color: #6c757d;
 }
 
+/* Estilos mejorados para el navbar con tema de clima */
+.weather-app__header .navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-bottom: 3px solid #FFD700 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.weather-app__header .navbar-brand {
+  font-family: "Sekuya", system-ui;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.weather-app__header .navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.weather-app__header .nav-link {
+  font-family: "Sekuya", system-ui;
+  font-weight: 500;
+  transition: all 0.3s ease !important;
+  border-radius: 25px !important;
+  margin: 0 2px;
+}
+
+.weather-app__header .nav-link:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.weather-app__header .navbar-toggler {
+  border: none !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease;
+}
+
+.weather-app__header .navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: scale(1.1);
+}
+
+.weather-app__header .badge {
+  font-size: 0.7rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.txtAppClima{
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+    color: rgb(67, 67, 107) !important;
+    font-family: "Sekuya", system-ui;
+
+}
 /*# sourceMappingURL=main.css.map */
